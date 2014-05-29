@@ -226,7 +226,7 @@
  
  #include <asm/io.h>
  #include <asm/uaccess.h>
-@@ -181,12 +182,32 @@ exit_ath_wmac(u_int16_t wlanNum, struct 
+@@ -181,12 +182,33 @@ exit_ath_wmac(u_int16_t wlanNum, struct 
  	return 0;
  }
  
@@ -242,6 +242,7 @@
 +	{ ubnt, "LiteStation2",        PCI_ANY_ID, PCI_ANY_ID, PCI_ANY_ID, 0xa002 },
 +	{ ubnt, "LiteStation5",        PCI_ANY_ID, PCI_ANY_ID, PCI_ANY_ID, 0xa005 },
 +	{ ubnt, "NanoStation2",        PCI_ANY_ID, PCI_ANY_ID, PCI_ANY_ID, 0xc002 },
++	{ ubnt, "Topolstatoin5210",    PCI_ANY_ID, PCI_ANY_ID, PCI_ANY_ID, 0xc0a2, 12 },
 +	{ ubnt, "NanoStation5",        PCI_ANY_ID, PCI_ANY_ID, PCI_ANY_ID, 0xc005 },
 +	{ ubnt, "NanoStation Loco2",   PCI_ANY_ID, PCI_ANY_ID, PCI_ANY_ID, 0xc102 },
 +	{ ubnt, "NanoStation Loco5",   PCI_ANY_ID, PCI_ANY_ID, PCI_ANY_ID, 0xc105 },
