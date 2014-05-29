@@ -96,6 +96,7 @@ enable_atheros() {
 		NanoStation2) antgpio=7; invert=1;;
 		NanoStation5) antgpio=1; invert=1;;
 		"NanoStation Loco2") antgpio=2;;
+		Topolstation5210) antgpio=1; invert=1;;
 	esac
 	if [ -n "$invert" ]; then
 		_set="clear"
@@ -359,6 +360,12 @@ detect_atheros() {
 		devname="$(cat /proc/sys/dev/$dev/dev_name)"
 		case "$devname" in
 			NanoStation*)
+				EXTRA_DEV="
+# Ubiquiti NanoStation features
+	option antenna	auto # (auto|horizontal|vertical|external)
+"
+			;;
+			Topolstation*)
 				EXTRA_DEV="
 # Ubiquiti NanoStation features
 	option antenna	auto # (auto|horizontal|vertical|external)
